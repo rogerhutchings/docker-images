@@ -33,7 +33,8 @@ VOLUME ["/etc/samba"]
 
 EXPOSE 137/udp 138/udp 139 445
 
-ENTRYPOINT ["samba.sh"]
+# ENTRYPOINT ["samba.sh"]
+CMD ["/usr/bin/samba.sh","-s","public;/share"]
 
 LABEL org.freenas.interactive="false"                                   \
       org.freenas.version="1"                                           \
